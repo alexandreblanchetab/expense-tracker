@@ -1,0 +1,11 @@
+node_modules
+app/tailwind-build.css
+/.cache
+/build
+/dist
+/public/build
+/.mf
+/.idea
+.env
+.env.*
+.vscode
