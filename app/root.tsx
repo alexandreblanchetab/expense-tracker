@@ -1,8 +1,7 @@
-import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
-import styles from "./tailwind.css";
+import { Links, LiveReload, Meta, Outlet, Scripts } from "@remix-run/react";
 import Button from "./components/Button";
+import styles from "./tailwind.css";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
 
@@ -15,12 +14,13 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <main className="align-center bg-gray-700 flex flex-col gap-4 justify-start p-4 w-full text-center">
+        <main className="flex w-full flex-col items-center justify-start gap-4 bg-gray-700 p-4 text-center">
           <h1>Expense Tracker</h1>
-          <Button className="bg-white text-black">Gère toi</Button>
+          <Button className="w-[20rem] max-w-full bg-white p-5 pt-3 text-black">
+            Gère toi
+          </Button>
         </main>
         <Outlet />
-
         <Scripts />
         <LiveReload />
       </body>
